@@ -119,6 +119,7 @@ body {
     border-right: 1px solid;
 }
 
+/* HEADER */
 .header {
     display: flex;
     align-items: center;
@@ -133,16 +134,22 @@ body {
     align-items: center;
 }
 
-.monogram {
-    width: 49px;
-    height: 49px;
-    border: 1px solid var(--gold);
-    display: grid;
-    place-items: center;
-    color: var(--gold);
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 1px;
+/* TNC LOGO */
+.logo-box {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 0 8px rgba(225,195,138,.18));
 }
 
 .brand {
@@ -167,6 +174,7 @@ body {
     line-height: 2;
 }
 
+/* MAIN CONTENT */
 .main {
     max-width: 770px;
     padding: 55px 0 40px;
@@ -215,6 +223,7 @@ h1 .light {
     letter-spacing: .2px;
 }
 
+/* PRICING */
 .offer {
     margin-top: 43px;
     display: flex;
@@ -257,6 +266,7 @@ h1 .light {
     letter-spacing: 1px;
 }
 
+/* TELEGRAM BUTTON */
 .action {
     margin-top: 37px;
     display: flex;
@@ -299,6 +309,7 @@ h1 .light {
     line-height: 1.8;
 }
 
+/* FOOTER */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -315,6 +326,7 @@ h1 .light {
     color: var(--gold);
 }
 
+/* MOBILE RESPONSIVE */
 @media(max-width:650px) {
     body {
         padding: 10px;
@@ -330,13 +342,22 @@ h1 .light {
         letter-spacing: 2px;
     }
 
+    .brand small {
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
     .header-right {
         font-size: 8px;
     }
 
-    .monogram {
-        width: 42px;
-        height: 42px;
+    .logo-box {
+        width: 45px;
+        height: 45px;
+    }
+
+    .identity {
+        gap: 10px;
     }
 
     .main {
@@ -369,6 +390,37 @@ h1 .light {
     }
 }
 
+/* SMALL MOBILE */
+@media(max-width:380px) {
+    .poster {
+        padding: 22px 16px;
+    }
+
+    .brand {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .brand small {
+        font-size: 7px;
+    }
+
+    .header-right {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .logo-box {
+        width: 40px;
+        height: 40px;
+    }
+
+    .amount {
+        font-size: 43px;
+    }
+}
+
+/* ACCESSIBILITY */
 @media(prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation: none !important;
@@ -388,12 +440,20 @@ h1 .light {
     <header class="header">
 
         <div class="identity">
-            <div class="monogram">TNC</div>
+
+            <!-- YOUR TNC LOGO -->
+            <div class="logo-box">
+                <img
+                    src="https://i.ibb.co/PZ5fZH3n/1000177143-removebg-preview.png"
+                    alt="TNC Nursing Logo"
+                >
+            </div>
 
             <div class="brand">
                 TNC LECTURES
                 <small>THE LEARNING EXPERIENCE</small>
             </div>
+
         </div>
 
         <div class="header-right">
@@ -476,5 +536,4 @@ h1 .light {
 </main>
 
 </body>
-  </html>
-  
+</html>
